@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  overflow-x: hidden;
+}
+body img.fixed-image {
+  min-height: 100vh;
+  position: fixed;
+  width: 100%;
+  z-index: -5;
+  bottom: 0;
+  left: 0;
+}
+body nav {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+body nav ul {
+  display: flex;
+}
+body nav ul li {
+  list-style: none;
+  margin: 1rem;
+}
+body nav ul li a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body nav ul li a:hover {
+  color: rgb(54, 212, 138);
+}
+body main section.main-area {
+  min-height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main section.main-area div.info {
+  color: rgb(255, 255, 255);
+  flex-basis: 450px;
+  padding: 1rem;
+}
+body main section.main-area div.info h1 {
+  font-size: 3.5rem;
+}
+body main section.main-area div.info h2 {
+  font-size: 1.5rem;
+}
+body main section.main-area div.info a {
+  color: white;
+  background-color: rgb(54, 212, 138);
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+body main section.main-area div.info a:hover {
+  transform: scale(1.2);
+}
+body main section.main-area div.img-area {
+  flex-basis: 200px;
+}
+body main section.main-area div.img-area img {
+  width: 100%;
+  border-radius: 50%;
+}
+body main section.about-me {
+  background-color: rgb(154, 223, 191);
+  background-image: url(../img/BG2.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+body main section.about-me section.description {
+  width: 50%;
+  text-align: center;
+}
+body main section.about-me section.description h2 {
+  font-size: 2rem;
+}
+body main section.about-me section.description .progress-bar-area p {
+  margin-top: 1rem;
+}
+body main section.resume {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+body main section.resume section.table {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+}
+body main section.resume section.table table {
+  background-color: rgba(0, 0, 0, 0.267);
+  border-collapse: collapse;
+}
+body main section.resume section.table table tr {
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border-bottom: 2px solid gray;
+  transition: all 0.2s ease;
+}
+body main section.resume section.table table tr td {
+  padding: 1rem;
+}
+body main section.resume section.table table tr td a {
+  color: white;
+  text-decoration: none;
+}
+body main section.resume section.table table tr td a:hover {
+  background-color: rgb(72, 204, 143);
+}
+body main section.resume section.table table tr td p {
+  margin-bottom: 0rem;
+}
+
+footer {
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  margin: 0rem;
+  bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.438);
+  background-image: url(../img/BG3.jpg);
+}
+footer div.contact {
+  font-size: 1.3rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  body img.fixed-image {
+    width: 140%;
+  }
+  body main section.about-me section.description {
+    width: 80%;
+  }
+  body main section.resume {
+    overflow-x: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  body nav {
+    position: static;
+  }
+  body nav ul {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
