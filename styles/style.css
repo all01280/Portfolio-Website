@@ -46,7 +46,7 @@ body nav ul li a:hover {
   color: rgb(54, 212, 138);
 }
 body main section.main-area {
-  min-height: 70vh;
+  min-height: 95vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -55,6 +55,7 @@ body main section.main-area {
 body main section.main-area div.info {
   color: rgb(255, 255, 255);
   flex-basis: 450px;
+  min-width: 40vw;
   padding: 1rem;
 }
 body main section.main-area div.info h1 {
@@ -81,15 +82,16 @@ body main section.main-area div.img-area {
   flex-basis: 200px;
 }
 body main section.main-area div.img-area img {
-  width: 100%;
-  border-radius: 50%;
+  width: 150%;
+  border-radius: 40%;
 }
 body main section.about-me {
   background-color: rgb(154, 223, 191);
   background-image: url(../img/BG2.jpg);
   background-size: cover;
   background-position: center;
-  padding: 5rem 0rem;
+  min-height: 100vh;
+  padding: 10rem 0rem;
   display: flex;
   justify-content: center;
 }
@@ -97,11 +99,15 @@ body main section.about-me section.description {
   width: 50%;
   text-align: center;
 }
+body main section.about-me section.description p {
+  font-size: 1.3rem;
+}
 body main section.about-me section.description h2 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 body main section.about-me section.description .progress-bar-area p {
-  margin-top: 1rem;
+  font-size: 1.3rem;
+  margin-top: 2.5rem;
 }
 body main section.resume {
   display: flex;
