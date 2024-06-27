@@ -36,28 +36,7 @@ body {
     bottom: 0;
     left: 0;
   }
-  //導覽列功能
-  nav {
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    ul {
-      display: flex;
-      li {
-        list-style: none;
-        margin: 1rem;
-        a {
-          color: black;
-          text-decoration: none;
-          transition: all 0.3s ease;
-          &:hover {
-            color: rgb(54, 212, 138);
-          }
-        }
-      }
-    }
-  }
+
   //自我介紹內容
   main {
     section.main-area {
@@ -80,7 +59,7 @@ body {
         }
         a {
           color: white;
-          background-color: rgb(54, 212, 138);
+          background-color: rgb(101, 218, 212);
           padding: 0.25rem 0.5rem;
           font-size: 1.5rem;
           border-radius: 20px;
@@ -98,25 +77,29 @@ body {
         //border: 2px solid black;
         img {
           width: 150%;
-          border-radius: 40%;
+          border-radius: 50px;
         }
       }
     }
     section.about-me {
-      background-color: rgb(154, 223, 191);
+      // background-color: rgb(154, 223, 191);
       background-image: url(../img/BG2.jpg);
       background-size: cover;
       background-position: center;
 
       min-height: 100vh;
-      padding: 10rem 0rem;
+      padding: 4.5rem 0rem;
       display: flex;
       justify-content: center;
       section.description {
-        width: 50%;
+        width: 43%;
         text-align: center;
         p {
           font-size: 1.3rem;
+        }
+        .description-text {
+          font-size: 1.3rem;
+          text-align: left;
         }
         h2 {
           font-size: 3rem;
@@ -129,6 +112,8 @@ body {
         }
       }
     }
+
+    // portfolio
     section.portfolio {
       background: var(--second-bg-color);
       h2.heading {
@@ -139,76 +124,37 @@ body {
         padding-top: 2rem;
         margin-bottom: 0rem;
       }
-      .portfolio-container {
-        padding: 5rem;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        align-items: center;
-        gap: 2.5rem;
+      div.text {
+        h3 {
+          font-size: 1.5rem;
+          color: white;
+          padding: 2rem 10rem;
+          margin-bottom: 0rem;
+        }
+      }
 
-        .portfolio-box {
-          position: relative;
-          border-radius: 2rem;
-          box-shadow: 0 0 1rem var(--bg-color);
-          overflow: hidden;
-          display: flex;
+      .card {
+        img {
+          transition: all 0.5s ease;
 
-          &:hover .portfolio-layer {
-            transform: translateY(0);
+          &:hover {
+            transform: scale(1.1);
           }
+        }
+      }
+      a.icon {
+        color: white;
+        background-color: rgb(68, 68, 68);
+        padding: 0.25rem 0.5rem;
+        font-size: 1.5rem;
+        border-radius: 20px;
+        display: inline-block;
 
-          .portfolio-layer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            padding: 0 4rem;
-
-            transform: translateY(100%);
-            transition: 0.5s ease;
-
-            h4 {
-              font-size: 3rem;
-              color: white;
-            }
-            p {
-              font-size: 1.6rem;
-              margin: 0.3rem 0 1rem;
-              color: white;
-            }
-
-            a {
-              display: inline-flex;
-              justify-content: center;
-              align-items: center;
-              width: 5rem;
-              height: 5rem;
-              background: var(--text-color);
-              border-radius: 50%;
-
-              i {
-                font-size: 2rem;
-                color: var(--second-bg-color);
-              }
-            }
-          }
-
-          img {
-            width: 130%;
-            transition: 0.5s ease;
-
-            &:hover {
-              transform: scale(1.1);
-            }
-          }
+        margin-top: 2rem;
+        text-decoration: none;
+        transition: all 0.5s ease;
+        &:hover {
+          transform: scale(1.2);
         }
       }
     }
@@ -230,155 +176,6 @@ footer {
   }
 }
 
-@media screen and (max-width: 1400px) {
-  main {
-    section.portfolio {
-      h2 {
-        margin-bottom: 3rem;
-      }
-      div.portfolio-container {
-        .portfolio-box {
-          .portfolio-layer {
-            h4 {
-              font-size: 1.6rem;
-              color: white;
-            }
-            p {
-              font-size: 1rem;
-              margin: 0.1rem 0 1rem;
-              color: white;
-            }
-
-            a {
-              display: inline-flex;
-              justify-content: center;
-              align-items: center;
-              width: 3rem;
-              height: 3rem;
-              background: var(--text-color);
-              border-radius: 50%;
-
-              i {
-                font-size: 2rem;
-                color: var(--second-bg-color);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  main {
-    section.portfolio {
-      div.portfolio-container {
-        .portfolio-box {
-          .portfolio-layer {
-            h4 {
-              font-size: 1.6rem;
-              color: white;
-            }
-            p {
-              font-size: 1.2rem;
-              margin: 0.1rem 0 0.5rem;
-              color: white;
-            }
-
-            a {
-              display: inline-flex;
-              justify-content: center;
-              align-items: center;
-              width: 2.5rem;
-              height: 2.5rem;
-              background: var(--text-color);
-              border-radius: 50%;
-
-              i {
-                font-size: 1.5rem;
-                color: var(--second-bg-color);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  main {
-    section.portfolio {
-      div.portfolio-container {
-        .portfolio-box {
-          .portfolio-layer {
-            h4 {
-              font-size: 1.2rem;
-              color: white;
-            }
-            p {
-              font-size: 0.8rem;
-              margin: 0.1rem 0 0.5rem;
-              color: white;
-            }
-
-            a {
-              display: inline-flex;
-              justify-content: center;
-              align-items: center;
-              width: 2rem;
-              height: 2rem;
-              background: var(--text-color);
-              border-radius: 50%;
-
-              i {
-                font-size: 1.2rem;
-                color: var(--second-bg-color);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 900px) {
-  main {
-    section.portfolio {
-      h2 {
-        margin-bottom: 3rem;
-      }
-      div.portfolio-container {
-        grid-template-columns: repeat(2, 1fr);
-        .portfolio-box {
-          .portfolio-layer {
-            h4 {
-              font-size: 2rem;
-              color: white;
-            }
-            p {
-              font-size: 1.2rem;
-              margin: 0.1rem 0 1rem;
-              color: white;
-            }
-
-            a {
-              width: 2.5rem;
-              height: 2.5rem;
-
-              i {
-                font-size: 1.5rem;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 800px) {
   body {
     img.fixed-image {
@@ -392,73 +189,6 @@ footer {
       }
       section.resume {
         overflow-x: auto;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 750px) {
-  main {
-    section.portfolio {
-      h2 {
-        margin-bottom: 3rem;
-      }
-      div.portfolio-container {
-        grid-template-columns: 1fr;
-
-        .portfolio-box {
-          .portfolio-layer {
-            h4 {
-              font-size: 3rem;
-              color: white;
-            }
-            p {
-              font-size: 1.6rem;
-              margin: 0.1rem 0 1rem;
-              color: white;
-            }
-
-            a {
-              width: 4rem;
-              height: 4rem;
-
-              i {
-                font-size: 2rem;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 550px) {
-  main {
-    section.portfolio {
-      div.portfolio-container {
-        .portfolio-box {
-          .portfolio-layer {
-            h4 {
-              font-size: 2rem;
-              color: white;
-            }
-            p {
-              font-size: 1.2rem;
-              margin: 0.1rem 0 1rem;
-              color: white;
-            }
-
-            a {
-              width: 2.5rem;
-              height: 2.5rem;
-
-              i {
-                font-size: 1.5rem;
-              }
-            }
-          }
-        }
       }
     }
   }
