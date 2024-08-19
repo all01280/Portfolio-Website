@@ -194,6 +194,65 @@ footer {
   }
 }
 
+// 手機版排
+@media screen and (max-width: 768px) {
+  body {
+    main {
+      section.main-area {
+        div.img-area {
+          img {
+            width: 100%;
+          }
+        }
+        div.info {
+          h1 {
+            font-size: 2rem;
+          }
+          a {
+            font-size: 1rem;
+          }
+          h2 {
+            font-size: 1rem;
+          }
+        }
+      }
+      //About me
+      section.about-me {
+        section.description {
+          h2 {
+            padding-bottom: 1rem;
+            font-size: 1.5rem;
+          }
+          .description-text {
+            font-size: 1rem;
+          }
+          .progress-bar-area {
+            p {
+              font-size: 1rem;
+              margin-top: 0.5rem;
+            }
+            .progress {
+              --bs-progress-height: 0.6rem;
+            }
+          }
+        }
+      }
+
+      //Portfolio
+      section.portfolio {
+        div.text {
+          h3 {
+            font-size: 1rem;
+            color: white;
+            padding: 2rem 1rem;
+            margin-bottom: 0rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 500px) {
   body {
     nav {

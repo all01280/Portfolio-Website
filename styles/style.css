@@ -167,6 +167,40 @@ footer div.contact {
     overflow-x: auto;
   }
 }
+@media screen and (max-width: 768px) {
+  body main section.main-area div.img-area img {
+    width: 100%;
+  }
+  body main section.main-area div.info h1 {
+    font-size: 2rem;
+  }
+  body main section.main-area div.info a {
+    font-size: 1rem;
+  }
+  body main section.main-area div.info h2 {
+    font-size: 1rem;
+  }
+  body main section.about-me section.description h2 {
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  body main section.about-me section.description .description-text {
+    font-size: 1rem;
+  }
+  body main section.about-me section.description .progress-bar-area p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  body main section.about-me section.description .progress-bar-area .progress {
+    --bs-progress-height: 0.6rem;
+  }
+  body main section.portfolio div.text h3 {
+    font-size: 1rem;
+    color: white;
+    padding: 2rem 1rem;
+    margin-bottom: 0rem;
+  }
+}
 @media screen and (max-width: 500px) {
   body nav {
     position: static;
