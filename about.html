@@ -23,6 +23,8 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="./styles/style.css" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
     <img class="fixed-image" src="./img/BG1.jpg" alt="fixed-image" />
@@ -67,87 +69,77 @@
     </nav>
 
     <main>
-      <!-- <section class="background-1"></section> -->
       <!-- About me -->
       <section id="about-me" class="about-me">
-        <section class="description">
-          <h2>Something about me</h2>
-          <p class="description-text">
-            Through online learning and practical projects, I have mastered a
-            wide range of basic web development skills.
-          </p>
-          <p class="description-text">
-            Front-end technologies include HTML, CSS, and JavaScript. I also
-            have knowledge and experience with popular front-end frameworks such
-            as React, Node.js, and Bootstrap. In addition, I have relevant
-            knowledge of RWD and version control, which is beneficial to me in
-            web development and team collaboration.
-          </p>
-          <p class="description-text">
-            In back-end technology I have knowledge about MySQL database
-            management and integration.
-          </p>
-          <h4>Main skills</h4>
+        <!-- about me Card -->
 
-          <div class="progress-bar-area">
-            <p>HTML</p>
-            <div class="progress">
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated"
-                role="progressbar"
-                aria-valuenow="75"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="width: 85%"
-              ></div>
-            </div>
-            <p>CSS & SCSS</p>
-            <div class="progress">
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated bg-info"
-                role="progressbar"
-                aria-valuenow="75"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="width: 80%"
-              ></div>
-            </div>
-            <p>JavaScripts, Web Development</p>
-            <div class="progress">
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                role="progressbar"
-                aria-valuenow="75"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="width: 70%"
-              ></div>
-            </div>
-
-            <p>Recat</p>
-            <div class="progress">
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-                role="progressbar"
-                aria-valuenow="75"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="width: 60%"
-              ></div>
-            </div>
-            <p>Bootstrap</p>
-            <div class="progress">
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
-                role="progressbar"
-                aria-valuenow="75"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="width: 90%"
-              ></div>
-            </div>
+        <section class="description"><h2>Something about me</h2></section>
+        <div id="about_card" class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              I am passionate about learning and deeply enthusiastic about web
+              development. I consistently seek out new technologies and best
+              practices, dedicated to continuously improving my skills.
+            </h5>
+            <a href="./protfolio.html" class="btn btn-light">Portfolio page</a>
           </div>
-        </section>
+        </div>
+        <!-- Card Main skills -->
+        <div id="about_card" class="card">
+          <h5 id="About_header" class="card-header">
+            Main Skills <i id="zoom_out" class="bi bi-zoom-out"></i
+            ><i id="zoom_in" class="bi bi-zoom-in"></i>
+          </h5>
+          <div id="About_body" class="card-body">
+            <h5 class="card-title">Possessing a rich skill set</h5>
+            <p class="card-text">
+              HTML, CSS & SCSS, Bootstrap, JavaScripts, JQuery, React, Node.Js,
+              Next.js, Express.js, EJS, MySQL, Ajax, MongoDB, Mongoose, Restful
+              APIs
+            </p>
+          </div>
+        </div>
+        <!-- Card 前端介紹-->
+        <div id="about_card" class="card">
+          <h5 id="About_header2" class="card-header">
+            In Front-End development<i id="zoom_out2" class="bi bi-zoom-out"></i
+            ><i id="zoom_in2" class="bi bi-zoom-in"></i>
+          </h5>
+          <div id="About_body2" class="card-body">
+            <p class="card-text">
+              I am mastered in HTML, CSS & SCSS and responsive web design(RWD)
+              to create visually appealing user interfaces. I am familiar with
+              Bootstrap to streamline the development process and possess a
+              solid foundation in JavaScript and jQuery.
+            </p>
+            <p class="card-text">
+              In terms of front-end frameworks, I am familiar with React and
+              Next.js, enabling me to build efficient single-page applications
+              and server-side rendered applications.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 後端介紹-->
+        <div id="about_card" class="card">
+          <h5 id="About_header3" class="card-header">
+            In Back-End development<i id="zoom_out3" class="bi bi-zoom-out"></i
+            ><i id="zoom_in3" class="bi bi-zoom-in"></i>
+          </h5>
+          <div id="About_body3" class="card-body">
+            <p class="card-text">
+              I am proficient in Node.js and Express.js, allowing me to create
+              robust RESTful APIs. I utilize Ajax for asynchronous requests and
+              data loading, enabling features such as user authentication,
+              profile updates, article publishing, and deletion.
+            </p>
+            <p class="card-text">
+              For database management, I excel in MySQL and MongoDB, with
+              expertise in using Mongoose to seamlessly connect to MongoDB for
+              efficient data access.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
     <!-- 頁尾連結 -->

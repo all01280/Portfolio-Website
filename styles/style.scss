@@ -62,7 +62,7 @@ body {
           background-color: rgb(101, 218, 212);
           padding: 0.25rem 0.5rem;
           font-size: 1.5rem;
-          border-radius: 20px;
+          border-radius: 8px;
           display: inline-block;
           margin-top: 2rem;
           text-decoration: none;
@@ -89,28 +89,42 @@ body {
       background-size: cover;
       background-position: center;
 
-      min-height: 100vh;
+      /*       height: 100vh; */
       padding: 4.5rem 0rem;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      .card {
+        background-color: #f5f5f59a;
+        margin: 3rem;
+        width: 50%;
+        .card-header {
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+          transition: all 0.3s;
+          background-color: #5782f89a;
+          #zoom_in,
+          #zoom_in2,
+          #zoom_in3 {
+            display: none;
+          }
+        }
+        :hover {
+          background-color: #f5f5f59a;
+        }
+      }
+      .description_text {
+        font-size: 1.3rem;
+        margin: 2rem;
+        width: 50%;
+      }
       section.description {
-        width: 43%;
+        width: 100%;
         text-align: center;
+        padding-bottom: 2rem;
         p {
           font-size: 1.3rem;
-        }
-        .description-text {
-          font-size: 1.3rem;
-          text-align: left;
-        }
-        h2 {
-          font-size: 3rem;
-        }
-        .progress-bar-area {
-          p {
-            font-size: 1.3rem;
-            margin-top: 2.5rem;
-          }
         }
       }
     }
@@ -127,10 +141,13 @@ body {
         margin-bottom: 0rem;
       }
       div.text {
+        display: flex;
+        justify-content: center;
         h3 {
           font-size: 1.5rem;
           color: white;
-          padding: 2rem 10rem;
+          padding: 2rem 0rem;
+          width: 70%;
           margin-bottom: 0rem;
         }
       }
@@ -272,6 +289,12 @@ footer {
         flex-direction: column;
       }
     }
+  }
+
+  /* About me */
+  body main section.about-me .card {
+    margin: 1rem;
+    width: 90%;
   }
 
   /* footer */

@@ -64,7 +64,7 @@ body main section.main-area div.info a {
   background-color: rgb(101, 218, 212);
   padding: 0.25rem 0.5rem;
   font-size: 1.5rem;
-  border-radius: 20px;
+  border-radius: 8px;
   display: inline-block;
   margin-top: 2rem;
   text-decoration: none;
@@ -84,28 +84,44 @@ body main section.about-me {
   background-image: url(../img/BG2.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  /*       height: 100vh; */
   padding: 4.5rem 0rem;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+}
+body main section.about-me .card {
+  background-color: rgba(245, 245, 245, 0.6039215686);
+  margin: 3rem;
+  width: 50%;
+}
+body main section.about-me .card .card-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: rgba(87, 130, 248, 0.6039215686);
+}
+body main section.about-me .card .card-header #zoom_in,
+body main section.about-me .card .card-header #zoom_in2,
+body main section.about-me .card .card-header #zoom_in3 {
+  display: none;
+}
+body main section.about-me .card :hover {
+  background-color: rgba(245, 245, 245, 0.6039215686);
+}
+body main section.about-me .description_text {
+  font-size: 1.3rem;
+  margin: 2rem;
+  width: 50%;
 }
 body main section.about-me section.description {
-  width: 43%;
+  width: 100%;
   text-align: center;
+  padding-bottom: 2rem;
 }
 body main section.about-me section.description p {
   font-size: 1.3rem;
-}
-body main section.about-me section.description .description-text {
-  font-size: 1.3rem;
-  text-align: left;
-}
-body main section.about-me section.description h2 {
-  font-size: 3rem;
-}
-body main section.about-me section.description .progress-bar-area p {
-  font-size: 1.3rem;
-  margin-top: 2.5rem;
 }
 body main section.portfolio {
   background: var(--second-bg-color);
@@ -118,10 +134,15 @@ body main section.portfolio h2.heading {
   padding-top: 2rem;
   margin-bottom: 0rem;
 }
+body main section.portfolio div.text {
+  display: flex;
+  justify-content: center;
+}
 body main section.portfolio div.text h3 {
   font-size: 1.5rem;
   color: white;
-  padding: 2rem 10rem;
+  padding: 2rem 0rem;
+  width: 70%;
   margin-bottom: 0rem;
 }
 body main section.portfolio .card img {
@@ -220,6 +241,11 @@ footer section.text p {
   }
   body nav ul {
     flex-direction: column;
+  }
+  /* About me */
+  body main section.about-me .card {
+    margin: 1rem;
+    width: 90%;
   }
   /* footer */
   #footer .text {
