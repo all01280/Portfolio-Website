@@ -1,0 +1,238 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  overflow-x: hidden;
+}
+body img.fixed-image {
+  min-height: 100vh;
+  position: fixed;
+  width: 100%;
+  z-index: -5;
+  bottom: 0;
+  left: 0;
+}
+body main {
+  /* about */
+}
+body main section.main-area {
+  min-height: 95vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main section.main-area div.info {
+  color: rgb(255, 255, 255);
+  flex-basis: 450px;
+  min-width: 40vw;
+  padding: 1rem;
+}
+body main section.main-area div.info h1 {
+  font-size: 3.5rem;
+}
+body main section.main-area div.info h2 {
+  font-size: 1.5rem;
+}
+body main section.main-area div.info a {
+  color: white;
+  background-color: rgb(101, 218, 212);
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+body main section.main-area div.info a:hover {
+  transform: scale(1.2);
+}
+body main section.main-area div.img-area {
+  flex-basis: 200px;
+}
+body main section.main-area div.img-area img {
+  width: 150%;
+  border-radius: 50px;
+}
+body main section.about-me {
+  background-image: url(../img/BG2.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 4.5rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+body main section.about-me section.description {
+  width: 43%;
+  text-align: center;
+}
+body main section.about-me section.description p {
+  font-size: 1.3rem;
+}
+body main section.about-me section.description .description-text {
+  font-size: 1.3rem;
+  text-align: left;
+}
+body main section.about-me section.description h2 {
+  font-size: 3rem;
+}
+body main section.about-me section.description .progress-bar-area p {
+  font-size: 1.3rem;
+  margin-top: 2.5rem;
+}
+body main section.portfolio {
+  background: var(--second-bg-color);
+}
+body main section.portfolio h2.heading {
+  font-size: 3rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  margin-bottom: 0rem;
+}
+body main section.portfolio div.text h3 {
+  font-size: 1.5rem;
+  color: white;
+  padding: 2rem 10rem;
+  margin-bottom: 0rem;
+}
+body main section.portfolio .card img {
+  transition: all 0.5s ease;
+}
+body main section.portfolio .card img:hover {
+  transform: scale(1.1);
+}
+body main section.portfolio a.icon {
+  color: white;
+  background-color: rgb(68, 68, 68);
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+body main section.portfolio a.icon:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  margin: 0rem;
+  background-color: rgba(245, 245, 245, 0.937254902);
+}
+footer section.text {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #7c7c7c;
+}
+footer section.text div.contact {
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+footer section.text p {
+  margin-bottom: 0;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  body img.fixed-image {
+    width: 140%;
+  }
+  body main section.about-me section.description {
+    width: 80%;
+  }
+  body main section.resume {
+    overflow-x: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  body main section.main-area div.img-area img {
+    width: 100%;
+  }
+  body main section.main-area div.info h1 {
+    font-size: 2rem;
+  }
+  body main section.main-area div.info a {
+    font-size: 1rem;
+  }
+  body main section.main-area div.info h2 {
+    font-size: 1rem;
+  }
+  body main section.about-me section.description h2 {
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  body main section.about-me section.description .description-text {
+    font-size: 1rem;
+  }
+  body main section.about-me section.description .progress-bar-area p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  body main section.about-me section.description .progress-bar-area .progress {
+    --bs-progress-height: 0.6rem;
+  }
+  body main section.portfolio div.text h3 {
+    font-size: 1rem;
+    color: white;
+    padding: 2rem 1rem;
+    margin-bottom: 0rem;
+  }
+}
+/* 手機RWD 細size */
+@media screen and (max-width: 576px) {
+  body nav {
+    position: static;
+  }
+  body nav ul {
+    flex-direction: column;
+  }
+  /* footer */
+  #footer .text {
+    flex-wrap: wrap;
+  }
+  #footer .text .contact {
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0;
+  }
+  #footer .text p {
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=style.css.map */

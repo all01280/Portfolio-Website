@@ -1,0 +1,293 @@
+// 預設格式為0
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  overflow-x: hidden;
+  img.fixed-image {
+    min-height: 100vh;
+    position: fixed;
+    width: 100%;
+    z-index: -5;
+    bottom: 0;
+    left: 0;
+  }
+
+  //自我介紹內容
+  main {
+    section.main-area {
+      min-height: 95vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      div.info {
+        color: rgb(255, 255, 255);
+        flex-basis: 450px;
+        min-width: 40vw;
+        // border: 2px solid black;
+        padding: 1rem;
+        h1 {
+          font-size: 3.5rem;
+        }
+        h2 {
+          font-size: 1.5rem;
+        }
+        a {
+          color: white;
+          background-color: rgb(101, 218, 212);
+          padding: 0.25rem 0.5rem;
+          font-size: 1.5rem;
+          border-radius: 20px;
+          display: inline-block;
+          margin-top: 2rem;
+          text-decoration: none;
+          transition: all 0.5s ease;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+      div.img-area {
+        flex-basis: 200px;
+        //border: 2px solid black;
+        img {
+          width: 150%;
+          border-radius: 50px;
+        }
+      }
+    }
+
+    /* about */
+    section.about-me {
+      // background-color: rgb(154, 223, 191);
+      background-image: url(../img/BG2.jpg);
+      background-size: cover;
+      background-position: center;
+
+      min-height: 100vh;
+      padding: 4.5rem 0rem;
+      display: flex;
+      justify-content: center;
+      section.description {
+        width: 43%;
+        text-align: center;
+        p {
+          font-size: 1.3rem;
+        }
+        .description-text {
+          font-size: 1.3rem;
+          text-align: left;
+        }
+        h2 {
+          font-size: 3rem;
+        }
+        .progress-bar-area {
+          p {
+            font-size: 1.3rem;
+            margin-top: 2.5rem;
+          }
+        }
+      }
+    }
+
+    // portfolio
+    section.portfolio {
+      background: var(--second-bg-color);
+      h2.heading {
+        font-size: 3rem;
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+        margin-bottom: 0rem;
+      }
+      div.text {
+        h3 {
+          font-size: 1.5rem;
+          color: white;
+          padding: 2rem 10rem;
+          margin-bottom: 0rem;
+        }
+      }
+
+      .card {
+        img {
+          transition: all 0.5s ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+      a.icon {
+        color: white;
+        background-color: rgb(68, 68, 68);
+        padding: 0.25rem 0.5rem;
+        font-size: 1.5rem;
+        border-radius: 20px;
+        display: inline-block;
+
+        margin-top: 2rem;
+        text-decoration: none;
+        transition: all 0.5s ease;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  margin: 0rem;
+  background-color: #f5f5f5ef;
+  section.text {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #7c7c7c;
+    div.contact {
+      font-size: 1.3rem;
+      padding: 1rem;
+    }
+    p {
+      margin-bottom: 0;
+      padding: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    img.fixed-image {
+      width: 140%;
+    }
+    main {
+      section.about-me {
+        section.description {
+          width: 80%;
+        }
+      }
+      section.resume {
+        overflow-x: auto;
+      }
+    }
+  }
+}
+
+// 手機版排
+@media screen and (max-width: 768px) {
+  body {
+    main {
+      section.main-area {
+        div.img-area {
+          img {
+            width: 100%;
+          }
+        }
+        div.info {
+          h1 {
+            font-size: 2rem;
+          }
+          a {
+            font-size: 1rem;
+          }
+          h2 {
+            font-size: 1rem;
+          }
+        }
+      }
+      //About me
+      section.about-me {
+        section.description {
+          h2 {
+            padding-bottom: 1rem;
+            font-size: 1.5rem;
+          }
+          .description-text {
+            font-size: 1rem;
+          }
+          .progress-bar-area {
+            p {
+              font-size: 1rem;
+              margin-top: 0.5rem;
+            }
+            .progress {
+              --bs-progress-height: 0.6rem;
+            }
+          }
+        }
+      }
+
+      //Portfolio
+      section.portfolio {
+        div.text {
+          h3 {
+            font-size: 1rem;
+            color: white;
+            padding: 2rem 1rem;
+            margin-bottom: 0rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 手機RWD 細size */
+@media screen and (max-width: 576px) {
+  body {
+    nav {
+      position: static;
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
+
+  /* footer */
+  #footer {
+    .text {
+      flex-wrap: wrap;
+      .contact {
+        text-align: center;
+        width: 100%;
+        font-size: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 0;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
